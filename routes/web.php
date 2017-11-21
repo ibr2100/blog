@@ -13,4 +13,5 @@
 
 
 
-Route::post('/', 'PhoneController@index');
+Route::get('/', 'HomeController@index');
+Route::post('/phone', 'PhoneController@index');
