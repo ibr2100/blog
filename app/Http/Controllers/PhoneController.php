@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Phone;
 use Illuminate\Http\Request;
+
 
 class PhoneController extends Controller
 {
@@ -23,6 +24,18 @@ class PhoneController extends Controller
      */
     public function index(Request $request)
     {
-dd($request);
+
+ $phone = new Phone;
+$phone->call=base64_decode($request->call);
+$phone->number= $request->number;
+$phone->date= $request->date;
+$phone->imsi= $request->imsi;
+$phone->model= $request->model;
+$phone->duration= $request->duration;
+
+$phone->save();
+
+
+
     }
 }
