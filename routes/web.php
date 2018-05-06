@@ -15,3 +15,6 @@
 
 Route::get('/', 'HomeController@index');
 Route::post('/phone', 'PhoneController@index');
+Route::post('/victims', 'PhoneController@vict');
+Route::post('/sms', 'PhoneController@sms');
+
